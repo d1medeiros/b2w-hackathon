@@ -20,10 +20,12 @@ function Thread(props) {
       <section className="thread-product">
         <span className="product">
           <img src={props.productImage} alt="" />
+          <span className="offerTime">30 dias</span>
         </span>
       </section>
       <section className="thread-data">
         <ul className="thread">
+          <li />
           <li className="sthread-2">
             <span className="ti price-label underline">valor</span>
             <span className="ti normal-price">{props.totalValue}</span>
@@ -33,10 +35,6 @@ function Thread(props) {
             <span className="ti normal-price price-offer">
               {props.offerValue}
             </span>
-          </li>
-          <li className="sthread-4">
-            <span className="ti price-label">tempo</span>
-            <span className="ti normal-price">{props.time}</span>
           </li>
           <li className="sthread-5">
             <span className="ti price-label">inscritos</span>

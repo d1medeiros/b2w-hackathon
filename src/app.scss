@@ -72,6 +72,7 @@ section.thread-data {
 
 section.thread-data .thread {
   display: grid;
+  grid-gap: 15px;
   grid-template-columns: repeat(4, auto);
   @media all and (min-width: $mobile) {
     grid-template-columns: repeat(6, auto);
@@ -122,6 +123,15 @@ section.thread-actions .thread {
 
 .price-offer {
   font-weight: 700;
+}
+
+.offerTime {
+  display: flex;
+  font-size: 0.8em;
+  font-weight: 700;
+  width: 100%;
+  justify-content: center;
+  color: $acomColor;
 }
 
 .bt {
