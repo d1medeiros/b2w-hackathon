@@ -1,0 +1,141 @@
+$mobile: 414px;
+$desktop: 600px;
+
+$prodImage: 50px;
+$prodImage-grid: 80px;
+
+$acomColor: #e60014;
+
+.cred {
+  background: red;
+}
+
+.cgreen {
+  background: green;
+}
+
+ul {
+  padding-left: 0;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+img {
+  object-fit: contain;
+  width: $prodImage;
+  padding: 0.7em;
+}
+
+.main {
+  width: 100%;
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  display: grid;
+  grid-gap: 10px;
+}
+
+.container {
+  width: $mobile;
+  @media all and (min-width: $mobile) {
+    width: $desktop;
+  }
+}
+
+.thread-wrapper {
+  border: 1px solid $acomColor;
+  display: grid;
+  grid-template-columns: $prodImage-grid auto;
+  grid-template-areas: "product data";
+}
+
+.thread-data {
+  grid-area: data;
+}
+
+.thread-actions {
+  grid-area: actions;
+}
+
+.thread-product {
+  grid-area: product;
+}
+
+section.thread-data {
+}
+
+section.thread-data .thread {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  @media all and (min-width: $mobile) {
+    grid-template-columns: repeat(6, auto);
+  }
+}
+
+section.thread-actions .thread {
+  display: flex;
+  flex-flow: column;
+}
+
+@for $i from 1 through 6 {
+  .sthread-#{$i} {
+    //height: 70px;
+    font-family: Arial, sans-serif;
+    font-size: 0.7em;
+    max-width: 80px;
+  }
+}
+
+.thread-product {
+  display: flex;
+  align-items: center;
+}
+
+.product {
+}
+
+.ti {
+  margin: 10px 0px 0px 0px;
+}
+
+.price-label {
+  display: block;
+  border-bottom: 1px solid currentColor;
+  margin-bottom: 0.8em;
+  margin-right: 1.6em;
+  color: #b2b2b2;
+}
+
+.normal-price {
+  display: block;
+  font-weight: 500;
+  font-size: 1.2em;
+  margin-top: unset;
+  color: #565656;
+}
+
+.price-offer {
+  font-weight: 700;
+}
+
+.bt {
+  background: $acomColor;
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  text-transform: lowercase;
+  font-size: 13px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+  font-weight: 700;
+  padding: 5px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+}
